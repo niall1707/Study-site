@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects - StudyHub Ireland</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-book-half"></i> StudyHub Ireland
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="subjects.html">Subjects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practice.html">Practice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="bi bi-person-circle"></i> Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Choose Your Subject</h1>
+            <p class="lead">Select a subject to start your study journey</p>
+        </div>
+    </section>
+
+    <!-- Exam Selection -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="btn-group w-100" role="group">
+                <button type="button" class="btn btn-outline-primary active" id="btnLeavingCert">
+                    Leaving Certificate
+                </button>
+                <button type="button" class="btn btn-outline-primary" id="btnJuniorCert">
+                    Junior Certificate
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div id="leavingCertSubjects">
+                <h2 class="mb-4">Leaving Certificate Subjects</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <i class="bi bi-calculator"></i>
+                            </div>
+                            <h4>Mathematics</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Master algebra, calculus, and more</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 45%"></div>
+                            </div>
+                            <small class="text-muted">45% Complete</small>
+                            <a href="practice.html?subject=maths&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h4>English</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Literature, poetry, and composition</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                            <small class="text-muted">60% Complete</small>
+                            <a href="practice.html?subject=english&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <i class="bi bi-translate"></i>
+                            </div>
+                            <h4>Irish</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Gaeilge, litríocht, agus scríbhneoireacht</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 30%"></div>
+                            </div>
+                            <small class="text-muted">30% Complete</small>
+                            <a href="practice.html?subject=irish&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <i class="bi bi-flask"></i>
+                            </div>
+                            <h4>Biology</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Life sciences and human biology</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                            <small class="text-muted">20% Complete</small>
+                            <a href="practice.html?subject=biology&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <i class="bi bi-atom"></i>
+                            </div>
+                            <h4>Chemistry</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Elements, compounds, and reactions</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 15%"></div>
+                            </div>
+                            <small class="text-muted">15% Complete</small>
+                            <a href="practice.html?subject=chemistry&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                                <i class="bi bi-lightning"></i>
+                            </div>
+                            <h4>Physics</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Motion, energy, and forces</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 10%"></div>
+                            </div>
+                            <small class="text-muted">10% Complete</small>
+                            <a href="practice.html?subject=physics&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <h4>Geography</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Physical and human geography</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted">Not Started</small>
+                            <a href="practice.html?subject=geography&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h4>History</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Irish and European history</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted">Not Started</small>
+                            <a href="practice.html?subject=history&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                                <i class="bi bi-cash-stack"></i>
+                            </div>
+                            <h4>Business</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Enterprise and commerce</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted">Not Started</small>
+                            <a href="practice.html?subject=business&exam=lc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="juniorCertSubjects" style="display: none;">
+                <h2 class="mb-4">Junior Certificate Subjects</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <i class="bi bi-calculator"></i>
+                            </div>
+                            <h4>Mathematics</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Numbers, algebra, and geometry</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 35%"></div>
+                            </div>
+                            <small class="text-muted">35% Complete</small>
+                            <a href="practice.html?subject=maths&exam=jc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h4>English</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Reading, writing, and oral communication</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <small class="text-muted">50% Complete</small>
+                            <a href="practice.html?subject=english&exam=jc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <i class="bi bi-translate"></i>
+                            </div>
+                            <h4>Irish</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Gaeilge cumarsáide</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 25%"></div>
+                            </div>
+                            <small class="text-muted">25% Complete</small>
+                            <a href="practice.html?subject=irish&exam=jc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <i class="bi bi-tree"></i>
+                            </div>
+                            <h4>Science</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Biology, chemistry, and physics basics</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 40%"></div>
+                            </div>
+                            <small class="text-muted">40% Complete</small>
+                            <a href="practice.html?subject=science&exam=jc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <h4>Geography</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Maps, regions, and environments</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                            <small class="text-muted">20% Complete</small>
+                            <a href="practice.html?subject=geography&exam=jc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="subject-card">
+                            <div class="subject-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h4>History</h4>
+                            <div class="subject-stats">
+                                <span class="badge bg-success">Higher Level</span>
+                                <span class="badge bg-info">Ordinary Level</span>
+                            </div>
+                            <p class="mt-2 text-muted">Irish and world history</p>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar" style="width: 15%"></div>
+                            </div>
+                            <small class="text-muted">15% Complete</small>
+                            <a href="practice.html?subject=history&exam=jc" class="btn btn-primary w-100 mt-3">Study Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2026 StudyHub Ireland. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Toggle between exam types
+        document.getElementById('btnLeavingCert').addEventListener('click', function() {
+            document.getElementById('leavingCertSubjects').style.display = 'block';
+            document.getElementById('juniorCertSubjects').style.display = 'none';
+            this.classList.add('active');
+            document.getElementById('btnJuniorCert').classList.remove('active');
+        });
+
+        document.getElementById('btnJuniorCert').addEventListener('click', function() {
+            document.getElementById('leavingCertSubjects').style.display = 'none';
+            document.getElementById('juniorCertSubjects').style.display = 'block';
+            this.classList.add('active');
+            document.getElementById('btnLeavingCert').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
