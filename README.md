@@ -6,6 +6,14 @@ A modern, responsive study platform for Irish students preparing for Junior Cert
 
 ### Current Features
 - **📱 Fully Responsive Design** - Works seamlessly on mobile, tablet, and desktop devices using Bootstrap 5
+- **🎯 CAO Points Goal System** (NEW!)
+  - Set target CAO points (out of 625)
+  - Automatic difficulty adjustment based on goals
+  - Progress tracking toward target
+  - Course recommendations (Medicine, Law, Engineering, etc.)
+  - Manual difficulty override option
+  - Subject-by-subject breakdown
+  - Smart recommendations for improvement
 - **🎮 Gamification System**
   - XP and leveling system
   - Achievement badges

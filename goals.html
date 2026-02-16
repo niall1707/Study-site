@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAO Points Goal - StudyHub Ireland</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-book-half"></i> StudyHub Ireland
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="subjects.html">Subjects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practice.html">Practice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="goals.html">CAO Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="bi bi-person-circle"></i> Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">CAO Points Goal</h1>
+            <p class="lead">Set your target and track your progress</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Goal Setting Card -->
+                <div class="col-lg-5 mb-4">
+                    <div class="profile-card">
+                        <h4 class="mb-4"><i class="bi bi-bullseye"></i> Set Your CAO Points Goal</h4>
+                        
+                        <!-- Points Input -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Target CAO Points</label>
+                            <div class="input-group input-group-lg">
+                                <input type="number" class="form-control" id="targetPoints" 
+                                       min="0" max="625" value="500" placeholder="Enter points (0-625)">
+                                <span class="input-group-text">/ 625</span>
+                            </div>
+                            <small class="text-muted">Maximum 625 points from best 6 subjects</small>
+                        </div>
+
+                        <!-- Course Selection -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Target Course (Optional)</label>
+                            <select class="form-select" id="targetCourse">
+                                <option value="">Select a course...</option>
+                                <optgroup label="High Points (550-625)">
+                                    <option value="625">Medicine (600-625 points)</option>
+                                    <option value="600">Dentistry (590-625 points)</option>
+                                    <option value="580">Veterinary Medicine (570-600 points)</option>
+                                    <option value="570">Pharmacy (560-580 points)</option>
+                                    <option value="560">Law (Trinity) (550-570 points)</option>
+                                </optgroup>
+                                <optgroup label="High-Medium Points (450-549)">
+                                    <option value="520">Engineering (UCD/TCD) (500-540 points)</option>
+                                    <option value="500">Business & Law (480-520 points)</option>
+                                    <option value="480">Computer Science (460-500 points)</option>
+                                    <option value="470">Architecture (450-490 points)</option>
+                                    <option value="460">Science (450-480 points)</option>
+                                </optgroup>
+                                <optgroup label="Medium Points (350-449)">
+                                    <option value="420">Teaching (400-440 points)</option>
+                                    <option value="400">Nursing (380-420 points)</option>
+                                    <option value="380">Social Science (360-400 points)</option>
+                                    <option value="360">Arts (350-380 points)</option>
+                                </optgroup>
+                                <optgroup label="Standard Entry (200-349)">
+                                    <option value="320">Sports Science (300-340 points)</option>
+                                    <option value="300">General Studies (280-320 points)</option>
+                                    <option value="250">Foundation Courses (200-300 points)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Current Performance -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Current Estimated Points</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="currentPoints" 
+                                       min="0" max="625" value="350" placeholder="Your current level">
+                                <span class="input-group-text">points</span>
+                            </div>
+                            <small class="text-muted">Based on your practice performance</small>
+                        </div>
+
+                        <!-- Recommended Difficulty -->
+                        <div class="alert alert-info mb-4" id="difficultyRecommendation">
+                            <h6 class="mb-2"><i class="bi bi-lightbulb"></i> Recommended Difficulty</h6>
+                            <p class="mb-2" id="recommendedDifficulty">Medium Level</p>
+                            <small id="difficultyReason">Practice at this level to reach your goal efficiently</small>
+                        </div>
+
+                        <!-- Manual Override -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Manual Difficulty Override</label>
+                            <select class="form-select" id="manualDifficulty">
+                                <option value="auto">Auto (Recommended)</option>
+                                <option value="easy">Easy - Foundation Level</option>
+                                <option value="medium">Medium - Standard Level</option>
+                                <option value="hard">Hard - Higher Level</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100 btn-lg" id="saveGoalBtn">
+                            <i class="bi bi-check-circle"></i> Save Goal
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progress Tracking -->
+                <div class="col-lg-7">
+                    <!-- Current Status Card -->
+                    <div class="profile-card mb-4">
+                        <h4 class="mb-4"><i class="bi bi-graph-up-arrow"></i> Your Progress</h4>
+                        
+                        <div class="points-progress-display">
+                            <div class="row text-center mb-4">
+                                <div class="col-4">
+                                    <div class="stat-box">
+                                        <h2 class="text-primary mb-0" id="displayCurrent">350</h2>
+                                        <small class="text-muted">Current Points</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-box">
+                                        <h2 class="text-success mb-0" id="displayTarget">500</h2>
+                                        <small class="text-muted">Target Points</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-box">
+                                        <h2 class="text-info mb-0" id="displayRemaining">150</h2>
+                                        <small class="text-muted">Points to Go</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-visual mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Progress to Goal</span>
+                                    <span class="fw-bold text-primary" id="progressPercentage">70%</span>
+                                </div>
+                                <div class="progress" style="height: 30px; border-radius: 15px;">
+                                    <div class="progress-bar bg-gradient" id="progressBar" 
+                                         style="width: 70%" role="progressbar">
+                                        <span class="fw-bold">350 / 500</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success" id="motivationMessage">
+                                <i class="bi bi-emoji-smile"></i> 
+                                <strong>Great progress!</strong> You're 70% of the way to your goal. Keep it up!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subject Breakdown -->
+                    <div class="profile-card mb-4">
+                        <h5 class="mb-4"><i class="bi bi-bar-chart"></i> Points Breakdown by Subject</h5>
+                        <p class="text-muted mb-4">Your best 6 subjects count toward CAO points</p>
+                        
+                        <div class="subject-points-list">
+                            <div class="subject-points-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">Mathematics (Higher)</h6>
+                                        <small class="text-muted">Grade: H3 (77 points)</small>
+                                    </div>
+                                    <span class="badge bg-success fs-6">77 pts</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 77%"></div>
+                                </div>
+                            </div>
+
+                            <div class="subject-points-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">English (Higher)</h6>
+                                        <small class="text-muted">Grade: H4 (66 points)</small>
+                                    </div>
+                                    <span class="badge bg-success fs-6">66 pts</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 66%"></div>
+                                </div>
+                            </div>
+
+                            <div class="subject-points-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">Biology (Higher)</h6>
+                                        <small class="text-muted">Grade: H4 (66 points)</small>
+                                    </div>
+                                    <span class="badge bg-success fs-6">66 pts</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 66%"></div>
+                                </div>
+                            </div>
+
+                            <div class="subject-points-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">Irish (Ordinary)</h6>
+                                        <small class="text-muted">Grade: O2 (46 points)</small>
+                                    </div>
+                                    <span class="badge bg-info fs-6">46 pts</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 46%"></div>
+                                </div>
+                            </div>
+
+                            <div class="subject-points-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">Chemistry (Higher)</h6>
+                                        <small class="text-muted">Grade: H5 (56 points)</small>
+                                    </div>
+                                    <span class="badge bg-warning fs-6">56 pts</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 56%"></div>
+                                </div>
+                            </div>
+
+                            <div class="subject-points-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="mb-0">Geography (Higher)</h6>
+                                        <small class="text-muted">Grade: H6 (46 points)</small>
+                                    </div>
+                                    <span class="badge bg-warning fs-6">46 pts</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 46%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4 pt-3 border-top">
+                            <h5 class="mb-2">Total CAO Points: <strong class="text-primary">357 / 625</strong></h5>
+                            <small class="text-muted">Based on your best 6 subjects</small>
+                        </div>
+                    </div>
+
+                    <!-- Study Recommendations -->
+                    <div class="profile-card">
+                        <h5 class="mb-3"><i class="bi bi-clipboard-check"></i> Recommended Actions</h5>
+                        <div class="recommendations-list">
+                            <div class="recommendation-item">
+                                <i class="bi bi-arrow-up-circle text-success"></i>
+                                <div>
+                                    <strong>Focus on Chemistry</strong>
+                                    <p class="mb-0 text-muted small">Improve from H5 to H4 for +10 points</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <i class="bi bi-arrow-up-circle text-success"></i>
+                                <div>
+                                    <strong>Boost Geography</strong>
+                                    <p class="mb-0 text-muted small">Improve from H6 to H4 for +20 points</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <i class="bi bi-star text-warning"></i>
+                                <div>
+                                    <strong>Maintain Mathematics</strong>
+                                    <p class="mb-0 text-muted small">Your strongest subject - keep it up!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="text-center text-muted">
+                <p class="mb-0">&copy; 2026 StudyHub Ireland. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/goals.js"></script>
+</body>
+</html>
